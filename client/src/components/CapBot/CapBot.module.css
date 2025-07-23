@@ -1,0 +1,219 @@
+.capbot-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    background: transparent;
+    right: 35px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.capbot-toggler img {
+    width: 50px;
+    height: 50px;
+}
+
+.capbot-toggler span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: var(--gray);
+    color: var(--gray-dark);
+}
+
+:global(.show-capbot) .CapBot-popup {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+
+.CapBot-popup {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 90px;
+    right: 35px;
+    width: 460px;
+    height: 512px;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 15px;
+    transform: scale(0.3);
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 var(--gray),
+        0 32px 64px -45px var(--gray);
+    z-index: 1000;
+    transition: all 0.1s ease-in;
+}
+
+.CapBot-popup .chat-header {
+    display: flex;
+    padding: 15px 22px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gray);
+}
+
+.chat-header .header-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-info img {
+    height: 50px;
+    width: 50px;
+}
+
+.chat-header button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--gray);
+    color: var(--gray-dark);
+    font-size: 1.9rem;
+    padding-top: 2px;
+    border-radius: 50%;
+    margin-right: -10px;
+    transition: all 0.2s ease-in;
+}
+
+.chat-header button:hover {
+    background: var(--gray-dark);
+    color: var(--gray);
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 360px;
+    margin-bottom: 82px;
+    overflow-y: auto;
+    padding: 25px 22px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray) transparent;
+}
+
+.chat-body .message {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.chat-body .mensage-bot-message img {
+    height: 35px;
+    width: 35px;
+}
+
+.chat-body .mensage-bot-message .message-text {
+    padding: 12px 16px;
+    max-width: 100%;
+    width: fit-content;
+    color: var(--gray-dark);
+    background: var(--gray);
+    font-size: 0.95rem;
+    align-self: flex-end;
+    border-radius: 3px 13px 13px 13px;
+}
+
+.chat-body .mensage-user-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.chat-body .mensage-user-message .message-text {
+    padding: 12px 16px;
+    color: var(--gray);
+    max-width: 75%;
+    width: fit-content;
+    font-size: 0.95rem;
+    background: var(--gray-dark);
+    border-radius: 13px 13px 3px 13px;
+}
+
+
+.chat-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 15px 22px 20px;
+}
+
+.chat-footer .chat-form {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 32px;
+    outline: 1px solid var(--gray);
+    box-shadow: 0 0 8px var(--gray);
+}
+
+.chat-footer .chat-form:focus-within {
+    outline: 2px solid var(--gray-dark);
+}
+
+.chat-form .message-input {
+    border: none;
+    color: var(--gray-dark);
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 47px;
+    padding: 0 17px;
+    font-size: 0.95rem;
+}
+
+.message-input::placeholder {
+    color: var(--gray-dark);
+}
+
+.chat-form button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    outline: none;
+    display: none;
+    font-size: 1.15rem;
+    cursor: pointer;
+    color: var(--white);
+    flex-shrink: 0;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--gray-dark);
+    transition: all 0.3s ease-in;
+}
+
+.chat-form button:hover {
+    background: var(--gray);
+    color: var(--gray-dark);
+}
+
+.chat-form .message-input:valid~button {
+    display: block;
+}
+
+@media (max-width: 769px) {
+    .CapBot-popup{
+        width: 308px;
+    }
+
+}

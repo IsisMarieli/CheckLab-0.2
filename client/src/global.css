@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inria Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+body{
+  background: var(--gray-ligth);
+}
+
+:root {
+  --blue-light:#1450EF; 
+  --blue-dark: #0E004B;
+  --blue-transparent:#E8FBF3;
+  --purple-transparent:#EDD9FE;
+  --orange-transparent:#FFE6C1;
+
+  --black: #000000;
+  --gray-ligth: #F6F6F6;
+  --gray-dark: #757575;
+  --gray: #E5E5E5;
+  --white:#ffffff;
+}

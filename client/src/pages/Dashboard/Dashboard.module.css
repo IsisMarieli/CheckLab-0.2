@@ -1,0 +1,92 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    height: 100%;
+}
+
+.WrapperInit {
+    display: flex;
+    align-items: center;
+    gap: 275px;
+    color: var(--blue-dark);
+}
+
+.WrapperBuscar {
+    display: flex;
+    gap: 15px;
+}
+
+.notUser {
+    margin-top: 20px;
+    color: var(--blue-dark);
+}
+
+
+input {
+    width: 190px;
+    height: 27px;
+    border-radius: 2px;
+    border: 0.5px solid var(--blue-dark);
+    color: var(--blue-dark);
+    background: var(--gray-ligth);
+    padding: 7px;
+}
+
+input:focus {
+    outline: 2px solid var(--blue-light);
+    border: none;
+}
+
+input::placeholder {
+    color: var(--blue-dark);
+}
+
+.btnBuscar {
+    border: none;
+    width: 50px;
+    height: 27px;
+    background: var(--blue-light);
+    color: var(--white);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.btnBuscar:hover {
+    background: var(--blue-dark);
+}
+
+input,
+.btnBuscar {
+    transition: all 0.3s ease-in;
+}
+
+
+@media (max-width: 769px) {
+    .WrapperInit {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .WrapperInit h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    input,
+    .btnBuscar {
+        width: 150px;
+    }
+}
